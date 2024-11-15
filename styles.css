@@ -7,7 +7,7 @@
 body, html {
   width: 100%;
   height: 100%;
-  font-family: Arial, sans-serif;
+  font-family: 'Fjord One', serif; /* Fjord를 기본 폰트로 설정 */
 }
 
 .container {
@@ -27,6 +27,33 @@ body, html {
   height: 100%;
   object-fit: cover;
 }
+
+body {
+  font-family: 'Fjord One', serif; /* Fjord를 기본 폰트로 설정 */
+}
+
+h1, h2, h3 {
+  font-family: 'Fjord One', serif; /* 특정 제목에만 Fjord 적용 */
+}
+/* penne 글자 크기 */
+.title {
+  font-size: 4rem; /* 글씨 크기를 4rem으로 설정 */
+  font-weight: bold; /* 굵기 설정 */
+  color: white; /* 글씨 색상 설정 */
+    top: 20px; /* 상단에서의 거리 */
+  left: 20px; /* 왼쪽에서의 거리 */
+}
+/* prep time 글자 크기 */
+.prep-cook-time {
+  font-size: 1rem; /* 글씨 크기 */
+  font-weight: normal; /* 굵기 설정 */
+  color: white; /* 글씨 색상 */
+  position: absolute; /* 위치 지정 */
+  top: 55px; /* 상단에서의 거리 (수정 가능) */
+  right: 20px; /* 오른쪽에서의 거리 */
+
+}
+
 
 /* 텍스트와 시간을 양쪽 끝에 배치 */
 .text-row {
@@ -49,12 +76,6 @@ body, html {
 .title, .prep-cook-time {
   transition: none;
   cursor: default;
-}
-
-.prep-cook-time {
-  font-size: 1rem;
-  color: white;
-  text-align: right; /* 오른쪽 정렬 */
 }
 
 /* 왼쪽 하단 로고 박스 스타일 */
@@ -124,6 +145,16 @@ body, html {
 }
 
 /* 팝업 스타일 */
+
+.popup-title {
+  font-family: 'Fjord One', serif; /* 원하는 폰트 */
+  font-size: 2rem; /* 제목 글씨 크기 */
+  font-weight: bold; /* 제목 굵기 */
+  color: #333; /* 제목 색상 */
+  margin-bottom: 15px; /* 제목과 리스트 간의 간격 */
+  text-align: center; /* 제목을 중앙 정렬 */
+}
+
 .popup {
   display: none;
   position: fixed;
@@ -140,11 +171,19 @@ body, html {
   line-height: 1.6; /* 줄 간격을 늘려서 가독성 향상 */
 }
 
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 .popup-content {
   background-color: #fff;
   padding: 40px;
   border-radius: 0px;
-  width: 1200px;
+  width: 500px;
   max-width: 80%;
   text-align: left;
   position: relative;
@@ -157,3 +196,21 @@ body, html {
   font-size: 1.5rem;
   cursor: pointer;
 }
+
+.popup-list {
+  font-family: 'Fjord One', serif; /* 리스트에 글씨체 적용 */
+  padding-left: 20px; /* 리스트의 왼쪽 여백 */
+  margin: 10px 0; /* 위아래 마진 */
+  font-size: 1rem; /* 폰트 크기 */
+  line-height: 1.6; /* 줄 간격 */
+  color: #333; /* 텍스트 색상 */
+}
+
+.popup-list li {
+  margin-bottom: 10px; /* 리스트 아이템 간격 */
+}
+
+.popup-list li::marker {
+  color: #000; /* 마커(숫자 또는 동그라미)의 색상 */
+}
+
